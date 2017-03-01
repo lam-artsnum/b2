@@ -49,6 +49,7 @@ a:hover {
 h1 {
   float:left;
   font-weight:normal;
+  margin-left:25px;
 }
 
 /* ////////////////////////////// */
@@ -66,7 +67,7 @@ h1 {
 /* Le menu */
 /* ////////////////////////////// */
 
-ul {
+ul.menu {
   float:right;
   width:auto;
   margin:0 auto;
@@ -74,13 +75,13 @@ ul {
   padding-left:0;
   margin-top:20px;
 }
-ul li {
+ul.menu li {
   float:left;
   display:inline-block;
   
   
 }
-ul li a {
+ul.menu li a {
   float:left;
  padding:20px 15px;
   background:white;
@@ -88,13 +89,13 @@ ul li a {
   border-right:1px dotted #ccc;
 }
 /* On ne redéfinit que ce qui change. La cascade se charge du reste.. */
-ul li:last-child {
+ul.menu li:last-child {
   border-bottom:none;
 }
-ul li:last-child a {
+ul.menu li:last-child a {
   border-right:none;
 }
-ul li:hover a {
+ul.menu li:hover a {
   background:#fff;
   color:#cc0000;
 }
@@ -151,9 +152,10 @@ figure:hover figcaption {
 /* ////////////////////////////// */
 
 .sidebar {
-  width:30%;
+  width:28%;
   margin-top:50px;
   background:#f1f1f1;
+  margin-right:2%;
 }
 .sidebar h3 {
   margin-top:0;
@@ -172,4 +174,60 @@ figure:hover figcaption {
 }
 .footer:hover {
   color:#333;
+}
+
+/* ////////////////////////////// */
+/* Media Queries */
+/* ////////////////////////////// */
+
+@media (max-width:767px) {
+  h1 {
+    width:100%;
+    text-align:center;
+    margin:0;
+  }
+  ul.menu {
+    float:left;
+    width:100%;
+  }
+  ul.menu li {
+  width:25%;
+   
+}
+    ul.menu li a {
+  
+      width:100%;
+      text-align:center;
+}
+
+  .sidebar,
+  .content {
+    width:100%;
+    margin:0;
+    padding: 20px 30px;
+  }
+  .footer {
+    margin-top:0;
+  }
+}
+@media (max-width:479px) {
+
+  ul.menu {
+    float:left;
+    width:100%;
+
+  }
+  ul.menu li {
+  width:100%;
+
+   
+}
+    ul.menu li a {
+  border-right:none;
+      border-bottom:1px solid #ccc;
+}
+      ul.menu li:last-child a {
+      border-bottom:none;
+}
+
 }
