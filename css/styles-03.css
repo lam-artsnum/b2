@@ -1,0 +1,174 @@
+/*html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}*/
+
+/* ////////////////////////////// */
+/* Général */
+/* ////////////////////////////// */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family:Verdana;
+  background:url(images/background.svg);
+  background-repeat:no-repeat;
+  background-size:cover;
+  margin:0;
+}
+.header,
+.content,
+.sidebar,
+.footer {
+  float:left;
+  width:100%;
+}
+.main-container {
+  margin:0 auto;
+  max-width:1000px;
+}
+.content,
+.sidebar {
+  padding:25px;
+}
+
+a {
+ text-decoration:none;
+  color:#000;
+  background:#ffe2e2;
+}
+a:hover {
+  background:#cc0000;
+  color:white;
+  text-decoration:none;
+}
+h1 {
+  float:left;
+  font-weight:normal;
+}
+
+/* ////////////////////////////// */
+/* header */
+/* ////////////////////////////// */
+
+.header {
+  padding:20px;
+  margin-bottom:25px;
+  border-bottom:1px solid #ccc;
+    background:white;
+}
+
+/* ////////////////////////////// */
+/* Le menu */
+/* ////////////////////////////// */
+
+ul {
+  float:right;
+  width:auto;
+  margin:0 auto;
+  list-style-type:none;
+  padding-left:0;
+  margin-top:20px;
+}
+ul li {
+  float:left;
+  display:inline-block;
+  
+  
+}
+ul li a {
+  float:left;
+ padding:20px 15px;
+  background:white;
+  color:#333;
+  border-right:1px dotted #ccc;
+}
+/* On ne redéfinit que ce qui change. La cascade se charge du reste.. */
+ul li:last-child {
+  border-bottom:none;
+}
+ul li:last-child a {
+  border-right:none;
+}
+ul li:hover a {
+  color:#cc0000;
+}
+
+
+
+/* ////////////////////////////// */
+/* Content */
+/* ////////////////////////////// */
+
+
+.content {
+  clear:both;
+  width:70%;
+
+}
+.content div {
+
+}
+.article h3 {
+  font-weight:normal;
+  font-size:1.6em;
+  padding-bottom:5px;
+  border-bottom:1px solid #cc0000;
+}
+.article figure {
+  float:right;
+  position:relative;
+  max-width:150px;
+  border-radius:3px;
+  margin:0 0 10px 20px;
+}
+img {
+  max-width:100%;
+}
+figcaption {
+  background:#000;
+  color:white;
+  font-size:0.6em;
+  display:inline-block;
+  padding:2px 5px;
+  border-radius:3px;
+  opacity:0.5;
+  position:absolute;
+  bottom:6px;
+  left:3px;
+}
+figure:hover figcaption {
+  opacity:1;
+}
+
+/* ////////////////////////////// */
+/* Sidebar */
+/* ////////////////////////////// */
+
+.sidebar {
+  width:30%;
+  margin-top:50px;
+  background:#f1f1f1;
+}
+.sidebar h3 {
+  margin-top:0;
+}
+
+/* ////////////////////////////// */
+/* Footer */
+/* ////////////////////////////// */
+
+.footer {
+  text-align:center;
+  font-size:0.8em;
+  color:lightGray;
+  margin-top:25px;
+  border-top:1px solid lightGray;
+}
+.footer:hover {
+  color:#333;
+}

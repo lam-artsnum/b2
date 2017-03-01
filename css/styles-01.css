@@ -1,0 +1,35 @@
+h3 {
+  background:orange;
+}
+a {
+  background:red;
+  color:white;
+  text-decoration:none;
+}
+ul {
+  background:lightGreen;
+  padding:15px;
+}
+ul li {
+  background:olive;
+  padding:5px;
+  border-bottom:2px solid blue;
+}
+/* On ne redéfinit que ce qui change. La cascade se charge du reste.. */
+ul li:last-child {
+  border-bottom:none;
+}
+ul li:last-child a {
+  background:white;
+  color:#000;
+}
+.content {
+  background:pink;
+  padding:15px;
+}
+.content div {
+  background:Yellow;
+}
+.sidebar {
+  background:lightBlue;
+}

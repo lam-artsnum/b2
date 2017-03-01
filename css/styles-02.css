@@ -1,0 +1,93 @@
+/*html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}*/
+
+/* ////////////////////////////// */
+/* Général */
+/* ////////////////////////////// */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family:Verdana;
+}
+
+.content,
+.sidebar {
+  float:left;
+  padding:15px;
+}
+
+a {
+  background:red;
+  color:white;
+  text-decoration:none;
+}
+h1 {
+  float:left;
+}
+h3 {
+  background:orange;
+}
+
+/* ////////////////////////////// */
+/* Le menu */
+/* ////////////////////////////// */
+
+ul {
+  float:right;
+  width:auto;
+  margin:0 auto;
+  border:1px solid blue;
+  background:lightGreen;
+  list-style-type:none;
+  padding-left:0;
+  margin-top:20px;
+}
+ul li {
+  float:left;
+  display:inline-block;
+  
+  
+}
+ul li a {
+  float:left;
+ padding:10px;
+}
+/* On ne redéfinit que ce qui change. La cascade se charge du reste.. */
+ul li:last-child {
+  border-bottom:none;
+}
+ul li:last-child a {
+  background:white;
+  color:#000;
+}
+
+
+
+/* ////////////////////////////// */
+/* Content */
+/* ////////////////////////////// */
+
+
+.content {clear:both;
+  width:70%;
+  background:pink;
+}
+.content div {
+  background:Yellow;
+}
+
+/* ////////////////////////////// */
+/* Sidebar */
+/* ////////////////////////////// */
+
+.sidebar {
+  width:30%;
+  background:lightBlue;
+}
