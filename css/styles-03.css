@@ -15,7 +15,7 @@
 
 body {
   font-family:Verdana;
-  background:url(images/background.svg);
+  background:url(../images/background.svg);
   background-repeat:no-repeat;
   background-size:cover;
   margin:0;
@@ -95,6 +95,7 @@ ul li:last-child a {
   border-right:none;
 }
 ul li:hover a {
+  background:#fff;
   color:#cc0000;
 }
 
