@@ -1,0 +1,41 @@
+.exemple-01 section,
+.exemple-01 ul, 
+.exemple-01 li,
+.exemple-01 div, 
+.exemple-01 p, 
+.exemple-01 figure,
+.exemple-01 figcaption,
+.exemple-01 h1, 
+.exemple-01 h3 {
+  background-color:rgba(50,50,120,0.1);
+}
+.exemple-01 a {
+  background:lightGreen;
+}
+.w300 {
+	width:300px;
+}
+.inline-block {
+	display:inline-block;
+}
+.fixed {
+	position:fixed;
+	background:red;
+	color:white;
+	top:0;
+	right:0;
+}
+.absolute {
+	position:absolute;
+	background:blue;
+	color:white;
+	top:0;
+	left:0;
+}
+ul.w300 {
+	float:left;
+	background:yellow;
+}
+.clearfix {
+	clear:both;
+}
