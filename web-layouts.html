@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Web layouts</title>
+		<link rel="stylesheet" media="screen" href="web-layouts.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Une demo concernant le flux d'une page et les positionnements css classiques">
+	</head>
+	<body>
+		<div class="header">
+		<div class="main-container">
+			<h1>Flux et positionnements</h1>
+			<ul class="menu">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Flexbox</a></li>
+			</ul>
+			</div>
+		</div>
+		<div class="main-container">
+			<section class="exemple-01">
+				<h1>Flux Naturel</h1>
+				<p>Cet exemple reprend le positionnementnaturel du flux de la page. Les éléments s'empilent naturellement les uns au-dessus des autres, à l'exception des éléments de type "inline", comme les liens (ou les span, strong, et autres em...), qui suivent le flux du texte et ont une largeur égale à leur contenu.</p>
+				<p class="w300">Les éléments de type "block", eux, "occupent" toute la largeur de leur contenant (même si on modifie leur largeur) et forcent donc le contenu qui les suit à passer à la ligne. Ce paragraphe, auquel nous avons donné une largeur de 300px en est un parfait exemple.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas delectus, <a href="#">necessitatibus non accusamus</a> blanditiis vero facere, cum voluptates sequi et excepturi, esse at sint, autem deleniti aliquid itaque sed aspernatur.</p>
+				<div class="article">
+					<h3>Article 1</h3>
+					<figure>
+					  <img src="images/lacambre.jpg" alt="L'Abbaye de La Cambre" />
+					  <figcaption>L'Abbaye de La Cambre</figcaption>
+					</figure>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas delectus, <a href="#">necessitatibus non accusamus</a> blanditiis vero facere, cum voluptates sequi et excepturi, esse at sint, autem deleniti aliquid itaque sed aspernatur.</p>
+					<p>Velit voluptas, iure voluptatibus! Aspernatur dolore ad eos voluptatum error reiciendis in aliquid esse corporis, necessitatibus eligendi eius, dicta consequuntur, facilis vitae laboriosam. Laborum laboriosam repellat iure molestias blanditiis facere.</p>
+					</p>
+				</div>
+				<div class="article">
+					<h3>Article 2</h3>
+					<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas delectus, <a href="#">necessitatibus non accusamus</a> blanditiis vero facere, cum voluptates sequi et excepturi, esse at sint, autem deleniti aliquid itaque sed aspernatur.</p>
+					<p>Velit voluptas, iure voluptatibus! Aspernatur dolore ad eos voluptatum error reiciendis in aliquid esse corporis, necessitatibus eligendi eius, dicta consequuntur, facilis vitae laboriosam. Laborum laboriosam repellat iure molestias blanditiis facere.</p>
+					</p>
+				</div>
+				<div class="sidebar">
+					<h3>Sidebar</h3>
+					<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas delectus, <a href="#">necessitatibus non accusamus</a> blanditiis vero facere, cum voluptates sequi et excepturi, esse at sint, autem deleniti aliquid itaque sed aspernatur.</p>
+					<p>Velit voluptas, iure voluptatibus! Aspernatur dolore ad eos voluptatum error reiciendis in aliquid esse corporis, necessitatibus eligendi eius, dicta consequuntur, facilis vitae laboriosam. Laborum laboriosam repellat iure molestias blanditiis facere.</p>
+				</div>
+				<footer class="footer">
+					<p>Copy copy copy right</p>
+				</footer>	
+			</section><!-- end of exemple-01 -->
+
+			<section class="exemple-02">
+				<h1>Positionner vos éléments</h1>
+				<p>Vous pouvez affecter le positionnement de vos éléments de différentes façons. La première est de modifier leur propriété "display" (block, inline, inline-block, etc.) Avec inine-block, l'élément s'inscrira dans le flux du texte, ne fera plus toute la largeur de la page, mais pourra se comporter comme un élément de type block avec un modèle de boîte traditionnel (margin, padding, border..).</p>
+				<h2>Relative, absolute, fixed..</h2>
+				<p>Une autre façon de faire, complémentaire, sera de positionner notre élément à l'aide de la proporiété "position". Il existe différents types de positionnements: relative, absolute, fixed... Je vous renvoie à <a href="https://www.alsacreations.com/article/lire/53-GuidedesurviedupositionnementCSS.html" target="_blank">cette page</a> pour de plus amples informations.</p>
+				<p>Retenons cependant que:
+					<ul>
+						<li>Un élément <strong>positionné relativement (position:relative)</strong> occupera toujours le même espace dans le flux de votre page mais pourra être décalé par rapport à cette position naturelle à l'aide des propriétés top, left, right et bottom.</li>
+						<li>Un élément <strong>positionné de façon absolue (position:absolute) sortira du flux</strong> et sera positionné par rapport à son plus proche parent positionné. Il ne prendra plus toute la largeur de la page, sauf si on le spécifie. > En vert.</li>
+						<li>Un élément <strong>positionné de façon fixe (position:fixed) sortira du flux</strong> et sera positionné par rapport à votre page. Il ne prendra plus toute la largeur, sauf si on le spécifie. > En bleu. Attention, pour ces deux derniers positionnements, retenez que votre élément sort du flux et se superpose aux autres contenus!</li>
+					</ul>
+				</p>
+				<div class="article">
+					<h3 class="fixed">Position:fixed</h3>
+					<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas delectus, <a href="#">necessitatibus non accusamus</a> blanditiis vero facere, cum voluptates sequi et excepturi, esse at sint, autem deleniti aliquid itaque sed aspernatur.</p>
+					<p>Velit voluptas, iure voluptatibus! Aspernatur dolore ad eos voluptatum error reiciendis in aliquid esse corporis, necessitatibus eligendi eius, dicta consequuntur, facilis vitae laboriosam. Laborum laboriosam repellat iure molestias blanditiis facere.</p>
+					</p>
+				</div>
+				<div class="article">
+					<h3 class="absolute">Position:absolute</h3>
+					<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas delectus, <a href="#">necessitatibus non accusamus</a> blanditiis vero facere, cum voluptates sequi et excepturi, esse at sint, autem deleniti aliquid itaque sed aspernatur.</p>
+					<p>Velit voluptas, iure voluptatibus! Aspernatur dolore ad eos voluptatum error reiciendis in aliquid esse corporis, necessitatibus eligendi eius, dicta consequuntur, facilis vitae laboriosam. Laborum laboriosam repellat iure molestias blanditiis facere.</p>
+					</p>
+				</div>
+				<footer class="footer">
+					<p>Copy copy copy right</p>
+				</footer>	
+			</section><!-- end of exemple-02 -->
+
+			<section class="exemple-03">
+				<h1>Float</h1>
+				<p>Une autre façon de faire sera de faire flotter vos éléments, à gauche ou à droite, à l'intérieur de leur contenant. Notez qu'un élément non-flottant qui ne contient QUE des éléments flottants s'écrasera sur lui-même et aura donc une hauteur de 0. En clair, il disparaitra.</p>
+				<p>Par exemple, je fais flotter à gauche la liste ci-dessous, en lui donnant une largeur de 300px. Vous remarquerez que le contenu qui suit cette liste vient se coller à sa droite. Ma liste <strong>occupe un espace dans le flux de la page</strong>(contrairement aux positionnements fixe et absolu).</p>
+				<ul class="w300">
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+				</ul>
+				<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas delectus, <a href="#">necessitatibus non accusamus</a> blanditiis vero facere, cum voluptates sequi et excepturi, esse at sint, autem deleniti aliquid itaque sed aspernatur.</p>
+				<p>Velit voluptas, iure voluptatibus! Aspernatur dolore ad eos voluptatum error reiciendis in aliquid esse corporis, necessitatibus eligendi eius, dicta consequuntur, facilis vitae laboriosam. Laborum laboriosam repellat iure molestias blanditiis facere.</p>
+				</p>
+				<div class="article">
+					<h3>Clear</h3>
+					<p>
+					Si je veux que le paragraphe suivant passe à la ligne, je vais devoir utiliser la propriété "clear", qui va annuler le flottement à droite, à gauche ou des deux côtés. Le plus souvent, vous utiliserez "clear:both;". Vous pouvez également créer une classe "clearfix" par exemple.</p>
+					<ul class="w300">
+						<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+						<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+						<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+					</ul>
+					<p class="clearfix">Voici un paragraphe avec la propriété "clear:both;" appliquée. Velit voluptas, iure voluptatibus! Aspernatur dolore ad eos voluptatum error reiciendis in aliquid esse corporis, necessitatibus eligendi eius, dicta consequuntur, facilis vitae laboriosam. Laborum laboriosam repellat iure molestias blanditiis facere.</p>
+					</p>
+				</div>
+				<footer class="footer">
+					<p>Copy copy copy right</p>
+				</footer>	
+			</section><!-- end of exemple-01 -->
+
+			<section class="exemple-04">
+				<h1><a href="http://flexboxfroggy.com/" target="_blank">Flexbox</a></h1>
+			</section><!-- end of exemple-01 -->
+				
+		</div><!-- end of .main-container -->
+	</body>
+</html>
